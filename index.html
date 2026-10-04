@@ -1,123 +1,29 @@
+<!DOCKTYPE html>
 <html lang="id">
-<style>
-  h1 {
-    animation-name: muncul;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes muncul {
-    0% {
-      opacity: 0;
-      margin-top: -50px;
-    }
-    100% {
-      opacity: 1;
-      margin-top: 0;
-    }
-  }
-  
-  body {
-    background-color: blue;
-    color: black;
-    margin: 0;
-    min-height: 50vh;
-    background: linear-gradient(
-      #080b1f,
-        #020617,
-        #0b1026,
-        #151044,
-        #080b1f,
-    );
-    background-size: 400% 400%;
-    animation: backgroundgerak 8s ease infinite;
-  }
-  @keyframes backgroundgerak {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  #stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-  }
-  .stars {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    animation: kedip 2s infinite alternate;
-  }
-  @keyframes kedip {
-    from {
-      opacity: 0.2;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .foto {
-    width: 100%;
-    height: auto;
-    animation: fotomuncul 1.5s ease;
-  }
-  
-  @keyframes fotomuncul {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-</style>
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device=width,initial-scale=1.0">
   <title>Perjalanan Menuju Kesempurnaan</title>
+  <link rel="stylesheet" href="Pertama.css">
 </head>
   
 <body>
 <div id="stars"</div>
+  
+<div class="judul">
   <h1>Entitas Sempurna</h1>
+</div>
+
+<div class="deskripsi">
   <p>saya adalah seorang eh bukan saya adalah entitas luar angkasa dan saya datang ke bumi untuk menjalankan sebuah misi rahasia saya bersemayam di tubuh anak muda</p>
-  <p>saya dulunya berasal dari sebuah univers B09 yang di mana di univers itu ditempati oleh para entitas kuno bernama byarx semacam campuran dari elf dan dwarf</p>
-  <p>SEGINI DULU MALES MIKIR LAGI👍</p>
-  <img src="gambar_jpg.jpg" class="foto">
+</div>
+  
 <audio id="music" autoplay loop>
   <source src="ssstik.io_1787923746936.mp3" type="audio/mpeg">
 </audio>
-  
-<script>
-  const music = document.getElementById("music");
-  document.addEventListener("click",function() {
-    music.play();
-  },{once:true});
-</script>
 
-<script>
-  const stars = document.getElementById("stars");
-  for (let i= 0;i<100;i++){
-    const star = document.createElement("div");
-    star.className = "stars";
-    star.style.left = Math.random() * 100 + "%";
-    star.style.top = Math.random() * 100 + "%";
-    star.style.animationDelay = Math.random() * 5 + "s";
-    stars.appendChild(star);
-  }
-</script>
+<button class="tombol" id="myButton">Klik Saya!</button>
+
+<script src="Pertama.js"></script>
 </body>
-  </hmtl>
+</html>
